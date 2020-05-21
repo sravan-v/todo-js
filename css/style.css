@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(120deg, #E2C35D, #D88771);
+    color: white;
+    min-height: 100vh;
+}
+header h1{
+    font-size: 1.5rem;
+}
+header,
+form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input,
+form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+    outline: none;
+}
+
+form button{
+    color: #D88771;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover{
+    background: #D88771;
+    color: white
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+.todo{
+    margin: 0.5rem;
+    color: black;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    transition: all 1s ease;
+}
+.todo-list li{
+    flex: 1;
+    padding: 0 10px;
+}
+.complete-button,
+.delete-button{
+    background: #FF6F47;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+.complete-button{
+    background: green;
+}
+.fa-check,
+.fa-trash{
+    pointer-events: none;
+}
+.complete-todo{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transition: all 1s ease;
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+}
+select{
+    min-width: 10rem;
+    padding: 1.2rem;
+    background: white;
+    color: black;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.select{
+    position: relative;
+    overflow: hidden;
+}
+.select::after{
+    content: '\25bc';
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.9rem;
+    background: #D88771;
+    color: white;
+    transition: all ease .5s;
+    pointer-events: none;
+}
+.select:hover::after{
+    background: white;
+    color: #D88771;
+    transition: all ease .5s;
+}
